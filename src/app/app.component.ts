@@ -6,6 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ClientApp';
-  name: string= "Sparsh Verma";
+  counter: number=0;
+
+  constructor(){
+
+  }
+
+  
+  incrementCounter(){
+    this.counter++;
+  }
+
+  decrementCounter(){
+    this.counter--;
+  }
+  
+  resetCounter(){
+    this.counter=0;
+  }
 }

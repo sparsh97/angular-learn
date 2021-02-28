@@ -1,3 +1,18 @@
 h1 ,p{
     text-align: center;
+    color: white;
+    margin-top: 3rem;
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .btn{
+    color: white;
+    margin-top: 5rem;
+    background: rgb(159, 3, 190);
+    border-radius: 5rem;
 }

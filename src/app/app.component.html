@@ -1,2 +1,8 @@
-<h1>Hello World</h1>
-<p>-by {{name}}</p>
+<h1>Counter App</h1>
+<p>The current counter is {{counter}}</p>
+
+<div class="container">
+    <button class="btn " (click)="resetCounter()">Reset Counter</button>
+    <button class="btn " (click)="incrementCounter()">Increment Counter</button>
+    <button class="btn " (click)="decrementCounter()">Decrement Counter</button>
+</div>
