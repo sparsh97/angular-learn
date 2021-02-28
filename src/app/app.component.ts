@@ -12,15 +12,32 @@ export class AppComponent {
 
   }
 
-  
+
+  /**
+   * Increments counter
+   */
   incrementCounter(){
-    this.counter++;
+    if(this.counter<10){
+      this.counter++;
+    }else{
+      alert("Counter cannot be greater than 10!");
+    }
   }
 
+  /**
+   * Decrements counter
+   */
   decrementCounter(){
-    this.counter--;
+    if(this.counter>0){
+      this.counter--;
+    }else{
+      alert("Counter cannot be negative!");
+    }
   }
   
+  /**
+   * Resets counter
+   */
   resetCounter(){
     this.counter=0;
   }
