@@ -1,8 +1,17 @@
-<h1>Counter App</h1>
-<p>The current counter is {{counter}}</p>
+<section>
+    <header>
+        <h1>{{title}}</h1>
+        <p class="text-center text-white mt-4">Word Limit : {{limit}}</p>
+    </header>
+</section>
 
 <div class="container">
-    <button class="btn " (click)="resetCounter()">Reset Counter</button>
-    <button class="btn " (click)="incrementCounter()">Increment Counter</button>
-    <button class="btn " (click)="decrementCounter()">Decrement Counter</button>
+    <input class="slider form-control-range" type="range" name="range" id="range" min="1" max="50" value="{{limit}}" (change)="handleSlideChange($event)"> 
+</div>
+<div class="container text-center">
+<button class="btn btn-info" (click)="generate()">Genrate Words</button>
+</div>
+
+<div class="container card card-body" *ngIf="words">
+    <p class="display-4">{{words}}</p>
 </div>

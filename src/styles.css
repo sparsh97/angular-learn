@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
 html{
     box-sizing: border-box;
     font-size: 100%;
@@ -6,6 +7,8 @@ html{
 
 *,*::before,*::after{
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 body{
@@ -14,6 +17,6 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: auto;
     background-size: cover;
-    background-image: url("../src/assets/images/image.jpg");
+    background-image: url("../src/assets/images/bgc.jpg");
     background-position: top;
 }

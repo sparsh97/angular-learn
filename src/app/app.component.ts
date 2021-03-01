@@ -1,44 +1,27 @@
 import { Component } from '@angular/core';
-
+import randomWords from '../assets/utils/words';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  counter: number=0;
-
-  constructor(){
-
-  }
-
+  limit: any=10;
+  title= 'word-generator';
+  words='';
 
   /**
-   * Increments counter
+   * Handles slide change
+   * @param newLimit 
    */
-  incrementCounter(){
-    if(this.counter<10){
-      this.counter++;
-    }else{
-      alert("Counter cannot be greater than 10!");
-    }
+  handleSlideChange(newLimit:any){
+    this.limit= newLimit?.target?.value;
   }
 
   /**
-   * Decrements counter
+   * Generates app component
    */
-  decrementCounter(){
-    if(this.counter>0){
-      this.counter--;
-    }else{
-      alert("Counter cannot be negative!");
-    }
-  }
-  
-  /**
-   * Resets counter
-   */
-  resetCounter(){
-    this.counter=0;
+  generate(){
+    this.words= randomWords.slice(0,this.limit).join(' ');
   }
 }
