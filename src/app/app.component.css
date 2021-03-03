@@ -1,38 +1,23 @@
-.slider {
-    appearance: none;
-    height: 15px;
-    border-radius: 5%;
-    background: #919090;
-  
-    outline: none;
-    margin: 15px;
-  }
-  .slider::-webkit-slider-thumb {
-    appearance: none;
-    height: 35px;
-    width: 35px;
-    background-color: cyan;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    appearance: none;
-    height: 35px;
-    width: 35px;
-    background-color: cyan;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  button {
-    border-radius: 5px;
-    padding: 10px 35px;
-    margin: 25px 0;
-  }
 
-  h1{
-      text-align: center;
-      color: white;
-  }
-  
-  
+.container,
+.row {
+  height: 100vh;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.box {
+  width: auto;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: aliceblue;
+}
+

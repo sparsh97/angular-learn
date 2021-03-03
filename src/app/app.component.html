@@ -1,17 +1,23 @@
-<section>
-    <header>
-        <h1>{{title}}</h1>
-        <p class="text-center text-white mt-4">Word Limit : {{limit}}</p>
-    </header>
-</section>
-
 <div class="container">
-    <input class="slider form-control-range" type="range" name="range" id="range" min="1" max="50" value="{{limit}}" (change)="handleSlideChange($event)"> 
-</div>
-<div class="container text-center">
-<button class="btn btn-info" (click)="generate()">Genrate Words</button>
-</div>
-
-<div class="container card card-body" *ngIf="words">
-    <p class="display-4">{{words}}</p>
+    <div class="row justify-content-center align-items-center">
+        <div class="col col-lg-6">
+            <div class="text-center">
+                <h1 [hidden]="isCross" class="uppercase text-dangr">Player One Turn</h1>
+                <h1 [hidden]="!isCross" class="uppercase text-dangr">Player Two Turn</h1>
+            </div>
+            <div class="grid">
+                <div *ngFor="let item of itemArray; index as i">
+                    <div class="card">
+                        <div class="card-box box" (click)="handleClick(i)">
+                            <app-icon [iconName]="item"></app-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6 text-center">
+            <h1 class="text-uppercase"> Game Over {{winMessage}}</h1>
+            <button class="btn btn-danger text-uppercase pl-5 pr-5" (click)="reloadGame()">Reload Game</button>
+        </div>
+    </div>
 </div>
