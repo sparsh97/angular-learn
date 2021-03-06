@@ -1,0 +1,23 @@
+<ul class="list-group w-100" *ngFor="let todo of todos">
+  <li class="list-group-item d-flex justify-content-between w-100">
+    <span>
+      <input
+        (change)="changeTodoStatus(todo)"
+        type="checkbox"
+        [checked]="todo['isComplete']"
+      />
+    </span>
+    <span [ngClass]="{ completedTodo: todo['isComplete'] }">
+      {{ todo["title"] | titlecase }}
+    </span>
+    <span> {{ todo["data"] | date: "longDate" }} </span>
+    <span>
+      <!-- <p (click)="deleteTodos(todo)">Trash</p> -->
+      <fa-icon
+        (click)="deleteTodos(todo)"
+        [icon]="faTrashAlt"
+        class="icon"
+      ></fa-icon>
+    </span>
+  </li>
+</ul>
