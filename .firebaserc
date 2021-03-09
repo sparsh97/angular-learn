@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "github-searcher-47bae": {
+      "hosting": {
+        "ClientApp": [
+          "github-searcher-47bae"
+        ]
+      }
+    }
+  }
+}
