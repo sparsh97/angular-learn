@@ -1,1 +1,34 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg navabr-dark bg-primary">
+  <a [routerLink]="['/']" class="navbar-brand">Github Searcher</a>
+  <div class="navbar-collapse">
+    <div class="navbar-nav ml-auto text-white">
+      <div *ngIf="email" class="navbar-text float-left">{{ email }}</div>
+      <a
+        class="nav-item nav-link text-white"
+        routerLnkActive="active"
+        [routerLink]="['']"
+        >Home</a
+      >
+      <a
+        *ngIf="!email"
+        class="nav-item nav-link text-white"
+        routerLnkActive="active"
+        [routerLink]="['/signin']"
+        >SignIn</a
+      >
+      <a
+        *ngIf="email"
+        class="nav-item nav-link text-white"
+        (click)="handleSignOut()"
+        >SignOut</a
+      >
+      <a
+        *ngIf="!email"
+        class="nav-item nav-link text-white"
+        routerLnkActive="active"
+        [routerLink]="['/signup']"
+        >SignUp</a
+      >
+    </div>
+  </div>
+</nav>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { GithubService } from 'src/app/Service/github.service';
 
 @Component({
   selector: 'app-usercard',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsercardComponent implements OnInit {
 
-  constructor() { }
+  @Input() user:any;
+  constructor(private githubService: GithubService,
+    private toast: ToastrService) { }
 
   ngOnInit(): void {
   }

@@ -11,6 +11,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+import {AngularFireAuthModule} from "@angular/fire/auth";
+import {AngularFireModule} from "@angular/fire";
+import {environment} from "../environments/environment"
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +34,13 @@ import { SignupComponent } from './pages/signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase()),
+    AngularFireAuthModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
