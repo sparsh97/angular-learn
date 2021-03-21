@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "social-app-91830": {
+      "hosting": {
+        "ClientApp": [
+          "social-app-91830"
+        ]
+      }
+    }
+  }
+}
