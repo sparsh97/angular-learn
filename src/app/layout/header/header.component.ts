@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
       await this.auth.signOut();
       this.email=null;
       this.route.navigateByUrl("/signin");
+      this.toast.info("Logout Successfully!");
     } catch (error) {
       this.toast.error(error);
     }
