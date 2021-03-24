@@ -15,7 +15,8 @@ import {AngularFireDatabase} from "@angular/fire/database"
 export class SignupComponent implements OnInit {
   picture:string='';
   uploadPercent:number=0;
-  constructor(private toast: ToastrService,
+  constructor(
+    private toast: ToastrService,
     private auth: AuthService,
     private route:Router,
     private db: AngularFireDatabase,
